@@ -1,3 +1,2 @@
 nextcord
 chatterbot
-chatterbot-corpus
