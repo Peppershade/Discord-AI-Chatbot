@@ -27,9 +27,9 @@ chatbot = ChatBot('Insert Name here')
 # Create a new trainer for the chatbot
 trainer = ChatterBotCorpusTrainer(chatbot)
 
-# Train the chatbot based on the dutch corpus
+# Train the chatbot based on the english corpus
 for i in range(5):
-    trainer.train("chatterbot.corpus.dutch")
+    trainer.train("chatterbot.corpus.english")
 
 trainer = ListTrainer(chatbot)
 threads = []
