@@ -9,8 +9,12 @@ from chatterbot.trainers import ChatterBotCorpusTrainer, ListTrainer
 import json
 import threading
 
+#Add Docker ENV support
+import os
+TOKEN = os.environ['BOT_TOKEN']
 
-TOKEN = "token" #insert token here
+
+#TOKEN = "token" #insert token here
 intents = nextcord.Intents.default()
 intents.members = True
 
@@ -23,9 +27,9 @@ chatbot = ChatBot('Insert Name here')
 # Create a new trainer for the chatbot
 trainer = ChatterBotCorpusTrainer(chatbot)
 
-# Train the chatbot based on the english corpus
+# Train the chatbot based on the dutch corpus
 for i in range(5):
-    trainer.train("chatterbot.corpus.english")
+    trainer.train("chatterbot.corpus.dutch")
 
 trainer = ListTrainer(chatbot)
 threads = []
